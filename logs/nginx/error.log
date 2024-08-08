@@ -1,0 +1,12 @@
+2024/08/07 07:06:17 [error] 30#30: *11 upstream timed out (110: Operation timed out) while reading response header from upstream, client: 172.26.0.1, server: localhost, request: "GET /koneksi-database HTTP/1.1", upstream: "fastcgi://172.26.0.2:9000", host: "localhost:8000"
+2024/08/08 04:16:10 [emerg] 1#1: host not found in upstream "php_tes" in /etc/nginx/nginx.conf:20
+2024/08/08 04:16:21 [emerg] 1#1: host not found in upstream "php_tes" in /etc/nginx/nginx.conf:20
+2024/08/08 04:16:28 [emerg] 1#1: host not found in upstream "php_tes" in /etc/nginx/nginx.conf:20
+2024/08/08 04:16:34 [emerg] 1#1: host not found in upstream "php_tes" in /etc/nginx/nginx.conf:20
+2024/08/08 04:16:41 [emerg] 1#1: host not found in upstream "php_tes" in /etc/nginx/nginx.conf:20
+2024/08/08 04:16:48 [emerg] 1#1: host not found in upstream "php_tes" in /etc/nginx/nginx.conf:20
+2024/08/08 04:16:58 [emerg] 1#1: host not found in upstream "php_tes" in /etc/nginx/nginx.conf:20
+2024/08/08 04:17:11 [emerg] 1#1: host not found in upstream "php_tes" in /etc/nginx/nginx.conf:20
+2024/08/08 04:17:29 [emerg] 1#1: host not found in upstream "php_tes" in /etc/nginx/nginx.conf:20
+2024/08/08 04:51:17 [error] 21#21: *1 upstream timed out (110: Operation timed out) while reading response header from upstream, client: 172.26.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.26.0.2:9000", host: "localhost:8000"
+2024/08/08 05:03:28 [error] 30#30: *10 upstream timed out (110: Operation timed out) while reading response header from upstream, client: 172.26.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://172.26.0.2:9000", host: "localhost:8002"

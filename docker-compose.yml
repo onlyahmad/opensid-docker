@@ -1,0 +1,79 @@
+version: "3.1"
+services:
+
+  opensid1:
+    container_name: opensid1
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend      
+    ports:
+      - 8000:80
+    volumes:
+      - ./html/opensid1:/public_html/opensid1:rw
+      - ./.docker/nginx/nginx1.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+  opensid2:
+    container_name: opensid2
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend      
+    ports:
+      - 8002:80
+    volumes:
+      - ./html/opensid2:/public_html/opensid2:rw
+      - ./.docker/nginx/nginx2.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+  php_opensid:
+    container_name: mysql-server
+    networks:
+      - backend
+      - frontend
+    build:
+      context: ./
+      dockerfile: .docker/Dockerfile.php
+    ports:
+      - 9005:9000
+    depends_on:
+      - mysql-server-opensid
+    volumes:
+      - ./html:/public_html:rw
+      - ./.docker/php-fpm.conf:/usr/local/etc/php-fpm.d/www.conf
+
+  mysql-server-opensid:
+    container_name: mysql-server-opensid
+    image: "mysql:8.0"
+    environment:
+      MYSQL_ROOT_PASSWORD: passworddiskominfo!
+      MYSQL_USER: user
+      MYSQL_PASSWORD: passworddiskominfo@
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - db
+    deploy:
+      resources:
+        limits:
+          memory: 768M
+          cpus: "0.50"
+    restart: always
+
+volumes:
+  mysql-data:
+    external: false
+
+networks:
+  frontend:
+  backend:
+  db:
+    name: db
+    driver: bridge
