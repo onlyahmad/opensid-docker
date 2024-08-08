@@ -34,7 +34,7 @@ services:
       - ./.docker/nginx/nginx2.conf:/etc/nginx/nginx.conf
       - ./logs/nginx:/var/log/nginx
   php_opensid:
-    container_name: mysql-server
+    container_name: php_opensid
     networks:
       - backend
       - frontend
