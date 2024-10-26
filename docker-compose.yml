@@ -1179,6 +1179,7 @@ services:
     volumes:
       - ./html:/public_html:rw
       - ./.docker/php-fpm.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ./.docker/php.ini:/usr/local/etc/php/php.ini
 
 
 volumes:
