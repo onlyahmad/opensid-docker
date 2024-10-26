@@ -10,6 +10,11 @@ RUN apk add --no-cache autoconf g++ imagemagick imagemagick-dev make \
     && pecl install imagick \
     && docker-php-ext-enable imagick
 
+# Menginstal OPcache
+RUN docker-php-ext-install opcache
+
+
+
 # ioncube loader
 RUN curl -fSL 'http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_lin_x86-64.tar.gz' -o ioncube.tar.gz \
     && mkdir -p ioncube \
@@ -17,6 +22,5 @@ RUN curl -fSL 'http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_li
     && rm ioncube.tar.gz \
     && mv ioncube/ioncube_loader_lin_7.4.so /var/www/ioncube_loader_lin_7.4.so \
     && rm -r ioncube
-
 
 EXPOSE 9000
