@@ -32,3 +32,10 @@ do
   echo "======================================="
 done
 #==================end file======================================
+
+
+
+Make sure that the theme directory on your host has the correct permissions for Docker to read/write. Run the following commands to ensure the permissions are correct:
+
+sudo chown -R www-data:www-data /home/diskominfo/opensid-desa/.docker/themes
+sudo chmod -R 775 /home/diskominfo/opensid-desa/.docker/themes
