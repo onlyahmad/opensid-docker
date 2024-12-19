@@ -1,0 +1,1325 @@
+version: "3.1"
+services:
+
+  opensid8001:
+    container_name: opensid8001
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend      
+    ports:
+      - 8000:80
+    volumes:
+      - ./html/opensid8001:/public_html/opensid8001:ro
+      - opensid_themes:/public_html/opensid8001/desa/themes:ro
+      - ./.docker/nginx/nginx8001.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+  opensid8002:
+    container_name: opensid8002
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend      
+    ports:
+      - 8002:80
+    volumes:
+      - ./html/opensid8002:/public_html/opensid8002:ro
+      - opensid_themes:/public_html/opensid8002/desa/themes:ro
+      - ./.docker/nginx/nginx8002.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8003:
+    container_name: opensid8003
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend      
+    ports:
+      - 8003:80
+    volumes:
+      - ./html/opensid8003:/public_html/opensid8003:ro
+      - opensid_themes:/public_html/opensid8003/desa/themes:ro
+      - ./.docker/nginx/nginx8003.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8004:
+    container_name: opensid8004
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend      
+    ports:
+      - 8004:80
+    volumes:
+      - ./html/opensid8004:/public_html/opensid8004:ro
+      - opensid_themes:/public_html/opensid8004/desa/themes:ro
+      - ./.docker/nginx/nginx8004.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8005:
+    container_name: opensid8005
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend      
+    ports:
+      - 8005:80
+    volumes:
+      - ./html/opensid8005:/public_html/opensid8005:ro
+      - opensid_themes:/public_html/opensid8005/desa/themes:ro
+      - ./.docker/nginx/nginx8005.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8006:
+    container_name: opensid8006
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend      
+    ports:
+      - 8006:80
+    volumes:
+      - ./html/opensid8006:/public_html/opensid8006:ro
+      - opensid_themes:/public_html/opensid8006/desa/themes:ro
+      - ./.docker/nginx/nginx8006.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8007:
+    container_name: opensid8007
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend      
+    ports:
+      - 8007:80
+    volumes:
+      - ./html/opensid8007:/public_html/opensid8007:ro
+      - opensid_themes:/public_html/opensid8007/desa/themes:ro
+      - ./.docker/nginx/nginx8007.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8008:
+    container_name: opensid8008
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend      
+    ports:
+      - 8008:80
+    volumes:
+      - ./html/opensid8008:/public_html/opensid8008:ro
+      - opensid_themes:/public_html/opensid8008/desa/themes:ro
+      - ./.docker/nginx/nginx8008.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8009:
+    container_name: opensid8009
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend      
+    ports:
+      - 8009:80
+    volumes:
+      - ./html/opensid8009:/public_html/opensid8009:ro
+      - opensid_themes:/public_html/opensid8009/desa/themes:ro
+      - ./.docker/nginx/nginx8009.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8010:
+    container_name: opensid8010
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend      
+    ports:
+      - 8010:80
+    volumes:
+      - ./html/opensid8010:/public_html/opensid8010:ro
+      - opensid_themes:/public_html/opensid8010/desa/themes:ro
+      - ./.docker/nginx/nginx8010.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8011:
+    container_name: opensid8011
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8011:80
+    volumes:
+      - ./html/opensid8011:/public_html/opensid8011:ro
+      - opensid_themes:/public_html/opensid8011/desa/themes:ro
+      - ./.docker/nginx/nginx8011.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8012:
+    container_name: opensid8012
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8012:80
+    volumes:
+      - ./html/opensid8012:/public_html/opensid8012:ro
+      - opensid_themes:/public_html/opensid8012/desa/themes:ro
+      - ./.docker/nginx/nginx8012.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8013:
+    container_name: opensid8013
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8013:80
+    volumes:
+      - ./html/opensid8013:/public_html/opensid8013:ro
+      - opensid_themes:/public_html/opensid8013/desa/themes:ro
+      - ./.docker/nginx/nginx8013.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8014:
+    container_name: opensid8014
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8014:80
+    volumes:
+      - ./html/opensid8014:/public_html/opensid8014:ro
+      - opensid_themes:/public_html/opensid8014/desa/themes:ro
+      - ./.docker/nginx/nginx8014.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+
+  opensid8015:
+    container_name: opensid8015
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8015:80
+    volumes:
+      - ./html/opensid8015:/public_html/opensid8015:ro
+      - opensid_themes:/public_html/opensid8015/desa/themes:ro
+      - ./.docker/nginx/nginx8015.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8016:
+    container_name: opensid8016
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8016:80
+    volumes:
+      - ./html/opensid8016:/public_html/opensid8016:ro
+      - opensid_themes:/public_html/opensid8016/desa/themes:ro
+      - ./.docker/nginx/nginx8016.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8017:
+    container_name: opensid8017
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8017:80
+    volumes:
+      - ./html/opensid8017:/public_html/opensid8017:ro
+      - opensid_themes:/public_html/opensid8017/desa/themes:ro
+      - ./.docker/nginx/nginx8017.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8018:
+    container_name: opensid8018
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8018:80
+    volumes:
+      - ./html/opensid8018:/public_html/opensid8018:ro
+      - opensid_themes:/public_html/opensid8018/desa/themes:ro
+      - ./.docker/nginx/nginx8018.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8019:
+    container_name: opensid8019
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8019:80
+    volumes:
+      - ./html/opensid8019:/public_html/opensid8019:ro
+      - opensid_themes:/public_html/opensid8019/desa/themes:ro
+      - ./.docker/nginx/nginx8019.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8020:
+    container_name: opensid8020
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8020:80
+    volumes:
+      - ./html/opensid8020:/public_html/opensid8020:ro
+      - opensid_themes:/public_html/opensid8020/desa/themes:ro
+      - ./.docker/nginx/nginx8020.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8021:
+    container_name: opensid8021
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8021:80
+    volumes:
+      - ./html/opensid8021:/public_html/opensid8021:ro
+      - opensid_themes:/public_html/opensid8021/desa/themes:ro
+      - ./.docker/nginx/nginx8021.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+
+  opensid8022:
+    container_name: opensid8022
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8022:80
+    volumes:
+      - ./html/opensid8022:/public_html/opensid8022:ro
+      - opensid_themes:/public_html/opensid8022/desa/themes:ro
+      - ./.docker/nginx/nginx8022.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8023:
+    container_name: opensid8023
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8023:80
+    volumes:
+      - ./html/opensid8023:/public_html/opensid8023:ro
+      - opensid_themes:/public_html/opensid8023/desa/themes:ro
+      - ./.docker/nginx/nginx8023.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+
+  opensid8024:
+    container_name: opensid8024
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8024:80
+    volumes:
+      - ./html/opensid8024:/public_html/opensid8024:ro
+      - opensid_themes:/public_html/opensid8024/desa/themes:ro
+      - ./.docker/nginx/nginx8024.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8025:
+    container_name: opensid8025
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8025:80
+    volumes:
+      - ./html/opensid8025:/public_html/opensid8025:ro
+      - opensid_themes:/public_html/opensid8025/desa/themes:ro
+      - ./.docker/nginx/nginx8025.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8026:
+    container_name: opensid8026
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8026:80
+    volumes:
+      - ./html/opensid8026:/public_html/opensid8026:ro
+      - opensid_themes:/public_html/opensid8026/desa/themes:ro
+      - ./.docker/nginx/nginx8026.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8027:
+    container_name: opensid8027
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8027:80
+    volumes:
+      - ./html/opensid8027:/public_html/opensid8027:ro
+      - opensid_themes:/public_html/opensid8027/desa/themes:ro
+      - ./.docker/nginx/nginx8027.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8028:
+    container_name: opensid8028
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8028:80
+    volumes:
+      - ./html/opensid8028:/public_html/opensid8028:ro
+      - opensid_themes:/public_html/opensid8028/desa/themes:ro
+      - ./.docker/nginx/nginx8028.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+
+  opensid8029:
+    container_name: opensid8029
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8029:80
+    volumes:
+      - ./html/opensid8029:/public_html/opensid8029:ro
+      - opensid_themes:/public_html/opensid8029/desa/themes:ro
+      - ./.docker/nginx/nginx8029.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8030:
+    container_name: opensid8030
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8030:80
+    volumes:
+      - ./html/opensid8030:/public_html/opensid8030:ro
+      - opensid_themes:/public_html/opensid8030/desa/themes:ro
+      - ./.docker/nginx/nginx8030.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8031:
+    container_name: opensid8031
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8031:80
+    volumes:
+      - ./html/opensid8031:/public_html/opensid8031:ro
+      - opensid_themes:/public_html/opensid8031/desa/themes:ro
+      - ./.docker/nginx/nginx8031.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8032:
+    container_name: opensid8032
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8032:80
+    volumes:
+      - ./html/opensid8032:/public_html/opensid8032:ro
+      - opensid_themes:/public_html/opensid8032/desa/themes:ro
+      - ./.docker/nginx/nginx8032.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8033:
+    container_name: opensid8033
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8033:80
+    volumes:
+      - ./html/opensid8033:/public_html/opensid8033:ro
+      - opensid_themes:/public_html/opensid8033/desa/themes:ro
+      - ./.docker/nginx/nginx8033.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8034:
+    container_name: opensid8034
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8034:80
+    volumes:
+      - ./html/opensid8034:/public_html/opensid8034:ro
+      - opensid_themes:/public_html/opensid8034/desa/themes:ro
+      - ./.docker/nginx/nginx8034.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8035:
+    container_name: opensid8035
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8035:80
+    volumes:
+      - ./html/opensid8035:/public_html/opensid8035:ro
+      - opensid_themes:/public_html/opensid8035/desa/themes:ro
+      - ./.docker/nginx/nginx8035.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8036:
+    container_name: opensid8036
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8036:80
+    volumes:
+      - ./html/opensid8036:/public_html/opensid8036:ro
+      - opensid_themes:/public_html/opensid8036/desa/themes:ro
+      - ./.docker/nginx/nginx8036.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8037:
+    container_name: opensid8037
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8037:80
+    volumes:
+      - ./html/opensid8037:/public_html/opensid8037:ro
+      - opensid_themes:/public_html/opensid8037/desa/themes:ro
+      - ./.docker/nginx/nginx8037.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+
+  opensid8038:
+    container_name: opensid8038
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8038:80
+    volumes:
+      - ./html/opensid8038:/public_html/opensid8038:ro
+      - opensid_themes:/public_html/opensid8038/desa/themes:ro
+      - ./.docker/nginx/nginx8038.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8039:
+    container_name: opensid8039
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8039:80
+    volumes:
+      - ./html/opensid8039:/public_html/opensid8039:ro
+      - opensid_themes:/public_html/opensid8039/desa/themes:ro
+      - ./.docker/nginx/nginx8039.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8040:
+    container_name: opensid8040
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8040:80
+    volumes:
+      - ./html/opensid8040:/public_html/opensid8040:ro
+      - opensid_themes:/public_html/opensid8040/desa/themes:ro
+      - ./.docker/nginx/nginx8040.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8041:
+    container_name: opensid8041
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8041:80
+    volumes:
+      - ./html/opensid8041:/public_html/opensid8041:ro
+      - opensid_themes:/public_html/opensid8041/desa/themes:ro
+      - ./.docker/nginx/nginx8041.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8042:
+    container_name: opensid8042
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8042:80
+    volumes:
+      - ./html/opensid8042:/public_html/opensid8042:ro
+      - opensid_themes:/public_html/opensid8042/desa/themes:ro
+      - ./.docker/nginx/nginx8042.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8043:
+    container_name: opensid8043
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8043:80
+    volumes:
+      - ./html/opensid8043:/public_html/opensid8043:ro
+      - opensid_themes:/public_html/opensid8043/desa/themes:ro
+      - ./.docker/nginx/nginx8043.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8044:
+    container_name: opensid8044
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8044:80
+    volumes:
+      - ./html/opensid8044:/public_html/opensid8044:ro
+      - opensid_themes:/public_html/opensid8044/desa/themes:ro
+      - ./.docker/nginx/nginx8044.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8045:
+    container_name: opensid8045
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8045:80
+    volumes:
+      - ./html/opensid8045:/public_html/opensid8045:ro
+      - opensid_themes:/public_html/opensid8045/desa/themes:ro
+      - ./.docker/nginx/nginx8045.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8046:
+    container_name: opensid8046
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8046:80
+    volumes:
+      - ./html/opensid8046:/public_html/opensid8046:ro
+      - opensid_themes:/public_html/opensid8046/desa/themes:ro
+      - ./.docker/nginx/nginx8046.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8047:
+    container_name: opensid8047
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8047:80
+    volumes:
+      - ./html/opensid8047:/public_html/opensid8047:ro
+      - opensid_themes:/public_html/opensid8047/desa/themes:ro
+      - ./.docker/nginx/nginx8047.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8048:
+    container_name: opensid8048
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8048:80
+    volumes:
+      - ./html/opensid8048:/public_html/opensid8048:ro
+      - opensid_themes:/public_html/opensid8048/desa/themes:ro
+      - ./.docker/nginx/nginx8048.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8049:
+    container_name: opensid8049
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8049:80
+    volumes:
+      - ./html/opensid8049:/public_html/opensid8049:ro
+      - opensid_themes:/public_html/opensid8049/desa/themes:ro
+      - ./.docker/nginx/nginx8049.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8050:
+    container_name: opensid8050
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8050:80
+    volumes:
+      - ./html/opensid8050:/public_html/opensid8050:ro
+      - opensid_themes:/public_html/opensid8050/desa/themes:ro
+      - ./.docker/nginx/nginx8050.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8051:
+    container_name: opensid8051
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8051:80
+    volumes:
+      - ./html/opensid8051:/public_html/opensid8051:ro
+      - opensid_themes:/public_html/opensid8051/desa/themes:ro
+      - ./.docker/nginx/nginx8051.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8052:
+    container_name: opensid8052
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8052:80
+    volumes:
+      - ./html/opensid8052:/public_html/opensid8052:ro
+      - opensid_themes:/public_html/opensid8052/desa/themes:ro
+      - ./.docker/nginx/nginx8052.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8053:
+    container_name: opensid8053
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8053:80
+    volumes:
+      - ./html/opensid8053:/public_html/opensid8053:ro
+      - opensid_themes:/public_html/opensid8053/desa/themes:ro
+      - ./.docker/nginx/nginx8053.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8054:
+    container_name: opensid8054
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8054:80
+    volumes:
+      - ./html/opensid8054:/public_html/opensid8054:ro
+      - opensid_themes:/public_html/opensid8054/desa/themes:ro
+      - ./.docker/nginx/nginx8054.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8055:
+    container_name: opensid8055
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8055:80
+    volumes:
+      - ./html/opensid8055:/public_html/opensid8055:ro
+      - opensid_themes:/public_html/opensid8055/desa/themes:ro
+      - ./.docker/nginx/nginx8055.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8056:
+    container_name: opensid8056
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8056:80
+    volumes:
+      - ./html/opensid8056:/public_html/opensid8056:ro
+      - opensid_themes:/public_html/opensid8056/desa/themes:ro
+      - ./.docker/nginx/nginx8056.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8057:
+    container_name: opensid8057
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8057:80
+    volumes:
+      - ./html/opensid8057:/public_html/opensid8057:ro
+      - opensid_themes:/public_html/opensid8057/desa/themes:ro
+      - ./.docker/nginx/nginx8057.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8058:
+    container_name: opensid8058
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8058:80
+    volumes:
+      - ./html/opensid8058:/public_html/opensid8058:ro
+      - opensid_themes:/public_html/opensid8058/desa/themes:ro
+      - ./.docker/nginx/nginx8058.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8059:
+    container_name: opensid8059
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8059:80
+    volumes:
+      - ./html/opensid8059:/public_html/opensid8059:ro
+      - opensid_themes:/public_html/opensid8059/desa/themes:ro
+      - ./.docker/nginx/nginx8059.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8060:
+    container_name: opensid8060
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8060:80
+    volumes:
+      - ./html/opensid8060:/public_html/opensid8060:ro
+      - opensid_themes:/public_html/opensid8060/desa/themes:ro
+      - ./.docker/nginx/nginx8060.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8061:
+    container_name: opensid8061
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8061:80
+    volumes:
+      - ./html/opensid8061:/public_html/opensid8061:ro
+      - opensid_themes:/public_html/opensid8061/desa/themes:ro
+      - ./.docker/nginx/nginx8061.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8062:
+    container_name: opensid8062
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8062:80
+    volumes:
+      - ./html/opensid8062:/public_html/opensid8062:ro
+      - opensid_themes:/public_html/opensid8062/desa/themes:ro
+      - ./.docker/nginx/nginx8062.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8063:
+    container_name: opensid8063
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8063:80
+    volumes:
+      - ./html/opensid8063:/public_html/opensid8063:ro
+      - opensid_themes:/public_html/opensid8063/desa/themes:ro
+      - ./.docker/nginx/nginx8063.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8064:
+    container_name: opensid8064
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8064:80
+    volumes:
+      - ./html/opensid8064:/public_html/opensid8064:ro
+      - opensid_themes:/public_html/opensid8064/desa/themes:ro
+      - ./.docker/nginx/nginx8064.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8065:
+    container_name: opensid8065
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8065:80
+    volumes:
+      - ./html/opensid8065:/public_html/opensid8065:ro
+      - opensid_themes:/public_html/opensid8065/desa/themes:ro
+      - ./.docker/nginx/nginx8065.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+  opensid8066:
+    container_name: opensid8066
+    image: nginx:alpine
+    restart: always
+    depends_on:
+      - php_opensid
+    links:
+      - php_opensid
+    networks:
+      - frontend
+    ports:
+      - 8066:80
+    volumes:
+      - ./html/opensid8066:/public_html/opensid8066:ro
+      - opensid_themes:/public_html/opensid8066/desa/themes:ro
+      - ./.docker/nginx/nginx8066.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+
+
+  mysql-server-opensid:
+    container_name: mysql-server-opensid
+    image: "mariadb:10.3"
+    environment:
+      MYSQL_ROOT_PASSWORD: passworddiskominfo!
+      MYSQL_USER: user
+      MYSQL_PASSWORD: passworddiskominfo@
+    volumes:
+      - mysql-data-opensid-mariadb:/var/lib/mysql
+    networks:
+      - db
+    deploy:
+      resources:
+        limits:
+          memory: 768M
+          cpus: "0.50"
+    restart: always
+
+  php_opensid:
+    container_name: php_opensid
+    networks:
+      - backend_opensid
+      - frontend
+      - db
+    build:
+      context: ./
+      dockerfile: .docker/Dockerfile.php
+    ports:
+      - 9005:9000
+    depends_on:
+      - mysql-server-opensid
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: '1.0'
+        reservations:
+          memory: 512M
+    volumes:
+      - ./html:/public_html:rw
+      - ./.docker/php-fpm.conf:/usr/local/etc/php-fpm.d/www.conf
+      - ./.docker/php.ini:/usr/local/etc/php/php.ini
+      - opensid_themes:/public_html/opensid8001/desa/themes:rw
+      - opensid_themes:/public_html/opensid8002/desa/themes:rw
+      - opensid_themes:/public_html/opensid8003/desa/themes:rw
+      - opensid_themes:/public_html/opensid8004/desa/themes:rw
+      - opensid_themes:/public_html/opensid8005/desa/themes:rw
+      - opensid_themes:/public_html/opensid8006/desa/themes:rw
+      - opensid_themes:/public_html/opensid8007/desa/themes:rw
+      - opensid_themes:/public_html/opensid8008/desa/themes:rw
+      - opensid_themes:/public_html/opensid8009/desa/themes:rw
+      - opensid_themes:/public_html/opensid8010/desa/themes:rw
+      - opensid_themes:/public_html/opensid8011/desa/themes:rw
+      - opensid_themes:/public_html/opensid8012/desa/themes:rw
+      - opensid_themes:/public_html/opensid8013/desa/themes:rw
+      - opensid_themes:/public_html/opensid8014/desa/themes:rw
+      - opensid_themes:/public_html/opensid8015/desa/themes:rw
+      - opensid_themes:/public_html/opensid8016/desa/themes:rw
+      - opensid_themes:/public_html/opensid8017/desa/themes:rw
+      - opensid_themes:/public_html/opensid8018/desa/themes:rw
+      - opensid_themes:/public_html/opensid8019/desa/themes:rw
+      - opensid_themes:/public_html/opensid8020/desa/themes:rw
+      - opensid_themes:/public_html/opensid8021/desa/themes:rw
+      - opensid_themes:/public_html/opensid8022/desa/themes:rw
+      - opensid_themes:/public_html/opensid8023/desa/themes:rw
+      - opensid_themes:/public_html/opensid8024/desa/themes:rw
+      - opensid_themes:/public_html/opensid8025/desa/themes:rw
+      - opensid_themes:/public_html/opensid8026/desa/themes:rw
+      - opensid_themes:/public_html/opensid8027/desa/themes:rw
+      - opensid_themes:/public_html/opensid8028/desa/themes:rw
+      - opensid_themes:/public_html/opensid8029/desa/themes:rw
+      - opensid_themes:/public_html/opensid8030/desa/themes:rw
+      - opensid_themes:/public_html/opensid8031/desa/themes:rw
+      - opensid_themes:/public_html/opensid8032/desa/themes:rw
+      - opensid_themes:/public_html/opensid8033/desa/themes:rw
+      - opensid_themes:/public_html/opensid8034/desa/themes:rw
+      - opensid_themes:/public_html/opensid8035/desa/themes:rw
+      - opensid_themes:/public_html/opensid8036/desa/themes:rw
+      - opensid_themes:/public_html/opensid8037/desa/themes:rw
+      - opensid_themes:/public_html/opensid8038/desa/themes:rw
+      - opensid_themes:/public_html/opensid8039/desa/themes:rw
+      - opensid_themes:/public_html/opensid8040/desa/themes:rw
+      - opensid_themes:/public_html/opensid8041/desa/themes:rw
+      - opensid_themes:/public_html/opensid8042/desa/themes:rw
+      - opensid_themes:/public_html/opensid8043/desa/themes:rw
+      - opensid_themes:/public_html/opensid8044/desa/themes:rw
+      - opensid_themes:/public_html/opensid8045/desa/themes:rw
+      - opensid_themes:/public_html/opensid8046/desa/themes:rw
+      - opensid_themes:/public_html/opensid8047/desa/themes:rw
+      - opensid_themes:/public_html/opensid8048/desa/themes:rw
+      - opensid_themes:/public_html/opensid8049/desa/themes:rw
+      - opensid_themes:/public_html/opensid8050/desa/themes:rw
+      - opensid_themes:/public_html/opensid8051/desa/themes:rw
+      - opensid_themes:/public_html/opensid8052/desa/themes:rw
+      - opensid_themes:/public_html/opensid8053/desa/themes:rw
+      - opensid_themes:/public_html/opensid8054/desa/themes:rw
+      - opensid_themes:/public_html/opensid8055/desa/themes:rw
+      - opensid_themes:/public_html/opensid8056/desa/themes:rw
+      - opensid_themes:/public_html/opensid8057/desa/themes:rw
+      - opensid_themes:/public_html/opensid8058/desa/themes:rw
+      - opensid_themes:/public_html/opensid8059/desa/themes:rw
+      - opensid_themes:/public_html/opensid8060/desa/themes:rw
+      - opensid_themes:/public_html/opensid8061/desa/themes:rw
+      - opensid_themes:/public_html/opensid8062/desa/themes:rw
+      - opensid_themes:/public_html/opensid8063/desa/themes:rw
+      - opensid_themes:/public_html/opensid8064/desa/themes:rw
+      - opensid_themes:/public_html/opensid8065/desa/themes:rw
+      - opensid_themes:/public_html/opensid8066/desa/themes:rw 
+
+
+volumes:
+  mysql-data-opensid-mariadb:
+    external: false
+  opensid_themes:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./.docker/themes
+    
+
+networks:
+  frontend:
+  backend_opensid:
+    name: backend_opensid
+    driver: bridge
+  db:
+    name: db
+    driver: bridge
